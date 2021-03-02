@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Tạo giao diện form đăng kí người dùng cơ bản</h1>
+  </head>
+  <body>
+    <form
+      action="http://demo.codegym.vn/6/registration_form/register.php"
+      method="POST"
+    >
+      <table>
+        <tr>
+          <td><label for="yourname">Họ và tên:</label></td>
+          <td><input type="text" name="yourname" id="fullname" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="text" name="email" id="email" /></td>
+        </tr>
+        <td><label for="phone">Số điện thoại</label></td>
+        <td><input type="text" name="phone" id="phone" /></td>
+        <tr>
+          <td><label for="gender">Giới tính:</label></td>
+          <table>
+            <input type="radio" name="gender" id="gender" /><label for="gender">
+              Nam</label
+            >
+            <input type="radio" name="gender" id="gender" /><label for="gender"
+              >Nữ</label
+            >
+          </table>
+        </tr>
+      </table>
+      <input type="submit" value="Đăng kí" />
+    </form>
+  </body>
+</html>
