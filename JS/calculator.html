@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input id="number1" type="number" name="number1">
+	<input id="number2" type="number" name="number2">
+	<button id="plus" onclick="myFunction1()">+</button>
+	<button id="minus" onclick="myFunction2()">-</button>
+	<button id="multiply" onclick="myFunction3()">X</button>
+	<button id="share" onclick="myFunction4()">%</button><br>
+	<input id="result"><br><br>
+	<button type="reset" name="reset">Reset</button>
+	<script>
+		function myFunction1() {
+			var a = document.getElementById('number1').value
+			var b = document.getElementById('number2').value
+			var tong =parseInt(a) + parseInt(b);
+			document.getElementById('result').value = tong;
+		}
+		function myFunction2() {
+			var a = document.getElementById('number1').value
+			var b = document.getElementById('number2').value
+			var tong =parseInt(a) - parseInt(b);
+			document.getElementById('result').value = tong;
+		}
+		function myFunction3() {
+			var a = document.getElementById('number1').value
+			var b = document.getElementById('number2').value
+			var tong =parseInt(a) * parseInt(b);
+			document.getElementById('result').value = tong;
+		}
+		function myFunction4() {
+			var a = document.getElementById('number1').value
+			var b = document.getElementById('number2').value
+			var tong =parseInt(a) / parseInt(b);
+			document.getElementById('result').value = tong;
+		}
+	</script>
+</body>
+</html>

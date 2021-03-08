@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="check-in">Ngày đến: </label><input type="date" id="check-in" />
+    <label for="check-out">Ngày đi</label><input type="date" id="check-out" />
+    <select id="price">
+      <option value="500000">A. 500.000đ</option>
+      <option value="450000">B. 450.000đ</option>
+      <option value="350000">C. 350.000đ</option>
+    </select>
+    <button onclick="process()">Thanh Toán</button>
+    <div id="result"></div>
+  </body>
+  <script>
+    const checkIn = document.getElementById("check-in");
+    const checkOut = document.getElementById("check-out");
+    const priceDom = document.getElementById("price");
+    const resultDom = document.getElementById("result");
+    function process() {
+      const checkInDate = new Date(checkIn.value);
+      const checkOutDate = new Date(checkOut.value);
+      console.log("checkInDate");
+      console.log("checkOutDate");
+      const durationTime = Math.abs(checkInDate - checkOutDate);
+      const durationDate = Math.ceil(durationTime / (1000 * 60 * 60 * 24));
+      console.log("durationDate");
+      const durationWeeks = Math.ceil(durationDate / 7);
+      const price = Number(priceDom.value);
+      const total =
+        (durationWeeks * 7 * 0.9 + (durationDate - 7 * durationWeeks)) * price;
+      console.log(total);
+      resultDom.innerHTML = total + "VND";
+    }
+  </script>
+</html>

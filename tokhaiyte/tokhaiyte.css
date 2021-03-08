@@ -1,0 +1,17 @@
+.divheadbox {
+  display: flex;
+  justify-content: space-around;
+  background-color: aqua;
+  border-radius: 10px;
+  margin: 10px 100px;
+}
+.btnSignUp {
+  margin-top: 50%;
+  padding: 10px;
+  border-radius: 10px;
+}
+.btnSignIn {
+  margin-top: 50%;
+  padding: 10px;
+  border-radius: 10px;
+}
